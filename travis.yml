@@ -1,0 +1,35 @@
+# parallel tests
+
+language: ruby
+rvm: "2.6.6"
+sudo: true
+filter_secrets: false
+
+before_install:
+  - 'export PATH=~/bin:$PATH'
+  - gem update --system
+  - gem install bundler -v 1.17.3
+  - curl -L https://codeclimate.com/downloads/test-reporter/test-reporter-latest-linux-amd64 > ./cc-test-reporter
+  - chmod +x ./cc-test-reporter
+
+before_script:
+  - bin/setup
+  - ./cc-test-reporter before-build
+
+script:
+  - "bundle exec cucumber"
+  - ./cc-test-reporter format-coverage --output coverage/codeclimate.$SUITE.json
+  - "bundle exec rspec"
+  - ./cc-test-reporter format-coverage --output coverage/codeclimate.$SUITE.json
+
+cache:
+  bundler: true
+
+env:
+  global:
+    - CC_TEST_REPORTER_ID=bacc472975785fa4e06533d119b21e83b7c78388d3dc3a40ca8a702f4dc0823a
+
+# Pipe the coverage data to Code Climate
+after_script:
+  - ./cc-test-reporter sum-coverage coverage/codeclimate.*.json | ./cc-test-reporter upload-coverage
+  - ./cc-test-reporter after-build --exit-code $TRAVIS_TEST_RESULT
