@@ -5,26 +5,26 @@ rvm: "2.6.6"
 
 cache:
   bundler: true
+
 env:
   global:
     - CC_TEST_REPORTER_ID=acaec06a602770a14344b2b476577a3e10dbb9dbf93c1541669f35bed396b815
 
 before_install:
-  - 'export PATH=~/bin:$PATH'
-  - gem update --system
-  - gem install bundler -v 1.17.3
+  - nvm install
   - curl -L https://codeclimate.com/downloads/test-reporter/test-reporter-latest-linux-amd64 > ./cc-test-reporter
   - chmod +x ./cc-test-reporter
 
-before_script:
-  - bin/setup
-  - ./cc-test-reporter before-build
+install:
+  - bundle install --without production --path=${BUNDLE_PATH:-vendor/bundle}
+  - npm install
+
+before_script: bundle exec rake db:create db:migrate
 
 script:
-  - "bundle exec cucumber"
-  - ./cc-test-reporter format-coverage --output coverage/codeclimate.$SUITE.json
-  - "bundle exec rspec"
-  - ./cc-test-reporter format-coverage --output coverage/codeclimate.$SUITE.json
+  - bundle exec rake
+  - bundle exec cucumber
+  - bundle exec rspec
 
 # Pipe the coverage data to Code Climate
 after_script:
