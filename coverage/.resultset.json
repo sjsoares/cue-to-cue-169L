@@ -1,0 +1,172 @@
+{
+  "Cucumber Features": {
+    "coverage": {
+      "/Users/marielahernandez/Documents/cs169l/cue-to-cue-169L/app/mailers/application_mailer.rb": {
+        "lines": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "branches": {
+        }
+      },
+      "/Users/marielahernandez/Documents/cs169l/cue-to-cue-169L/app/models/application_record.rb": {
+        "lines": [
+          0,
+          0,
+          0
+        ],
+        "branches": {
+        }
+      },
+      "/Users/marielahernandez/Documents/cs169l/cue-to-cue-169L/app/jobs/application_job.rb": {
+        "lines": [
+          0,
+          null,
+          null,
+          null,
+          null,
+          null,
+          0
+        ],
+        "branches": {
+        }
+      },
+      "/Users/marielahernandez/Documents/cs169l/cue-to-cue-169L/app/controllers/application_controller.rb": {
+        "lines": [
+          0,
+          0
+        ],
+        "branches": {
+        }
+      },
+      "/Users/marielahernandez/Documents/cs169l/cue-to-cue-169L/app/controllers/main_controller.rb": {
+        "lines": [
+          0,
+          null,
+          0,
+          0,
+          null,
+          0
+        ],
+        "branches": {
+        }
+      },
+      "/Users/marielahernandez/Documents/cs169l/cue-to-cue-169L/app/helpers/application_helper.rb": {
+        "lines": [
+          0,
+          0
+        ],
+        "branches": {
+        }
+      },
+      "/Users/marielahernandez/Documents/cs169l/cue-to-cue-169L/app/channels/application_cable/connection.rb": {
+        "lines": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "branches": {
+        }
+      },
+      "/Users/marielahernandez/Documents/cs169l/cue-to-cue-169L/app/channels/application_cable/channel.rb": {
+        "lines": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "branches": {
+        }
+      }
+    },
+    "timestamp": 1612588477
+  },
+  "RSpec": {
+    "coverage": {
+      "/Users/marielahernandez/Documents/cs169l/cue-to-cue-169L/app/mailers/application_mailer.rb": {
+        "lines": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "branches": {
+        }
+      },
+      "/Users/marielahernandez/Documents/cs169l/cue-to-cue-169L/app/models/application_record.rb": {
+        "lines": [
+          0,
+          0,
+          0
+        ],
+        "branches": {
+        }
+      },
+      "/Users/marielahernandez/Documents/cs169l/cue-to-cue-169L/app/jobs/application_job.rb": {
+        "lines": [
+          0,
+          null,
+          null,
+          null,
+          null,
+          null,
+          0
+        ],
+        "branches": {
+        }
+      },
+      "/Users/marielahernandez/Documents/cs169l/cue-to-cue-169L/app/controllers/application_controller.rb": {
+        "lines": [
+          0,
+          0
+        ],
+        "branches": {
+        }
+      },
+      "/Users/marielahernandez/Documents/cs169l/cue-to-cue-169L/app/controllers/main_controller.rb": {
+        "lines": [
+          0,
+          null,
+          0,
+          0,
+          null,
+          0
+        ],
+        "branches": {
+        }
+      },
+      "/Users/marielahernandez/Documents/cs169l/cue-to-cue-169L/app/helpers/application_helper.rb": {
+        "lines": [
+          0,
+          0
+        ],
+        "branches": {
+        }
+      },
+      "/Users/marielahernandez/Documents/cs169l/cue-to-cue-169L/app/channels/application_cable/connection.rb": {
+        "lines": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "branches": {
+        }
+      },
+      "/Users/marielahernandez/Documents/cs169l/cue-to-cue-169L/app/channels/application_cable/channel.rb": {
+        "lines": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "branches": {
+        }
+      }
+    },
+    "timestamp": 1612588481
+  }
+}
