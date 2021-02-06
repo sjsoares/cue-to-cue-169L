@@ -2,8 +2,9 @@
 
 language: ruby
 rvm: "2.6.6"
-sudo: true
-filter_secrets: false
+
+cache:
+  bundler: true
 
 before_install:
   - 'export PATH=~/bin:$PATH'
@@ -24,15 +25,3 @@ script:
   - ./cc-test-reporter format-coverage --output coverage/codeclimate.$SUITE.json
   - "bundle exec rspec"
   - ./cc-test-reporter format-coverage --output coverage/codeclimate.$SUITE.json
-
-cache:
-  bundler: true
-
-env:
-  global:
-    - CC_TEST_REPORTER_ID=bacc472975785fa4e06533d119b21e83b7c78388d3dc3a40ca8a702f4dc0823a
-
-# Pipe the coverage data to Code Climate
-after_script:
-  - ./cc-test-reporter sum-coverage coverage/codeclimate.*.json | ./cc-test-reporter upload-coverage
-  - ./cc-test-reporter after-build --exit-code $TRAVIS_TEST_RESULT
