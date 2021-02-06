@@ -1,7 +1,7 @@
 source 'https://rubygems.org'
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
-ruby '2.6.3'
+ruby '2.6.6'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 6.1.1'
@@ -38,6 +38,21 @@ group :development do
   # Can be configured to work on production as well see: https://github.com/MiniProfiler/rack-mini-profiler/blob/master/README.md
   gem 'rack-mini-profiler', '~> 2.0'
   gem 'listen', '~> 3.3'
+end
+
+# make sure the following gems are in your production group:
+group :production do
+  gem 'pg'              # use PostgreSQL in production (Heroku)
+end
+
+# setup Cucumber, RSpec, Guard support
+group :test do
+  gem 'rspec-rails'
+  gem 'guard-rspec'
+  gem 'simplecov', :require => false
+  gem 'cucumber-rails', :require => false
+  gem 'cucumber-rails-training-wheels' # basic imperative step defs like "Then I should see..."
+  gem 'database_cleaner' # required by Cucumber
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem

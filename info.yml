@@ -1,0 +1,20 @@
+project:
+  name: 'q2q'
+  owner: 'cs169'
+  teamId: '4'
+  identities:
+    pivotal:
+      url: 'https://www.pivotaltracker.com/projects/2487821'
+    heroku:
+      url: 'https://cue-to-cue-169l.herokuapp.com/'
+    travis:
+      url: 'https://travis-ci.com/github/sjsoares/cue-to-cue-169L'
+    codecov:
+      url: 'https://app.codecov.io/gh/sjsoares/cue-to-cue-169L'
+  members:
+    member1:
+      name: 'Jenna'
+      surname: 'Kiyasu' 
+      githubUsername: 'jkiyasu'
+      pivotalUsername: 'jennakiyasu'
+      herokuEmail: 'jkiyasu@berkeley.edu'
