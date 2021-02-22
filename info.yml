@@ -8,7 +8,7 @@ project:
     heroku:
       url: 'https://cue-to-cue-169l.herokuapp.com/'
     travis:
-      url: 'https://travis-ci.com/github/sjsoares/cue-to-cue-169L'
+      url: 'https://travis-ci.com/github/jkiyasu/BGB-API'
     codecov:
       url: 'https://app.codecov.io/gh/sjsoares/cue-to-cue-169L'
   members:
